@@ -9,8 +9,8 @@ char* CHARACTERS = "abcdefhijklmnopqrstuvwxyzABCDEFHIJKLMNOPQRSTUVWXYZ123456789&
 int main(void) {
     srand(time(NULL));
     int characters_length = strlen(CHARACTERS);
-
-    char* password = malloc(sizeof(char) * (PASSWORD_SIZE + 1));
+    
+    char password[PASSWORD_SIZE + 1];
 
     for (int i = 0; i < PASSWORD_SIZE; i++) {
         password[i] = CHARACTERS[(int)(characters_length * ((float)rand() / (float)RAND_MAX))];
@@ -18,8 +18,6 @@ int main(void) {
     password[PASSWORD_SIZE] = '\0';
 
     printf("Password: %s\n", password);
-
-    free(password);
 
     return 0;
 }
