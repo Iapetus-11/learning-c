@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <inttypes.h>
 
-int main() {
+int main(void) {
     printf("Enter a number:");
     
     int maxFibo;

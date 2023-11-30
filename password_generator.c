@@ -6,7 +6,7 @@
 int PASSWORD_SIZE = 16;
 char* CHARACTERS = "abcdefhijklmnopqrstuvwxyzABCDEFHIJKLMNOPQRSTUVWXYZ123456789&%$#@!+-=";
 
-int main() {
+int main(void) {
     srand(time(NULL));
     int characters_length = strlen(CHARACTERS);
 
